@@ -24,14 +24,14 @@
         <Rectangle Fill="Black" Stroke="Black" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="5"/>
         <Rectangle Fill="Black" Stroke="Black" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="5"/>
         <!-- Squares -->
-        <Label x:Name="lblSqrAA" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="0" />
-        <Label x:Name="lblSqrAB" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="2" Grid.Row="0" />
-        <Label x:Name="lblSqrAC" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="4" Grid.Row="0" />
-        <Label x:Name="lblSqrBA" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="2" />
-        <Label x:Name="lblSqrBB" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="2" Grid.Row="2" />
-        <Label x:Name="lblSqrBC" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="4" Grid.Row="2" />
-        <Label x:Name="lblSqrCA" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="4" />
-        <Label x:Name="lblSqrCB" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="2" Grid.Row="4" />
-        <Label x:Name="lblSqrCC" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="4" Grid.Row="4" />
+        <Label x:Name="lblSqrAA" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="0" MouseDown="lblSqrAA_MouseDown" />
+        <Label x:Name="lblSqrAB" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="2" Grid.Row="0" MouseDown="lblSqrAB_MouseDown" />
+        <Label x:Name="lblSqrAC" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="4" Grid.Row="0" MouseDown="lblSqrAC_MouseDown" />
+        <Label x:Name="lblSqrBA" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="2" MouseDown="lblSqrBA_MouseDown" />
+        <Label x:Name="lblSqrBB" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="2" Grid.Row="2" MouseDown="lblSqrBB_MouseDown" />
+        <Label x:Name="lblSqrBC" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="4" Grid.Row="2" MouseDown="lblSqrBC_MouseDown" />
+        <Label x:Name="lblSqrCA" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="4" MouseDown="lblSqrCA_MouseDown" />
+        <Label x:Name="lblSqrCB" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="2" Grid.Row="4" MouseDown="lblSqrCB_MouseDown" />
+        <Label x:Name="lblSqrCC" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="4" Grid.Row="4" MouseDown="lblSqrCC_MouseDown" />
     </Grid>
 </Window>
