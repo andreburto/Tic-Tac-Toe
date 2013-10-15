@@ -41,6 +41,11 @@ namespace tictactoe
             MessageBox.Show("Game Over!");
         }
 
+        public void ClearBoard()
+        {
+
+        }
+
         public void xo(Label sqr, int square)
         {
             if (setornot[square] == true) { return; }
@@ -118,6 +123,11 @@ namespace tictactoe
         private void lblSqrCC_MouseDown(object sender, MouseButtonEventArgs e)
         {
             xo((Label)sender, 8);
+        }
+
+        private void btnReset_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
         }
     }
 }

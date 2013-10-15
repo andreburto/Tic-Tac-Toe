@@ -9,6 +9,7 @@
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="5"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="35"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -33,5 +34,9 @@
         <Label x:Name="lblSqrCA" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="4" MouseDown="lblSqrCA_MouseDown" />
         <Label x:Name="lblSqrCB" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="2" Grid.Row="4" MouseDown="lblSqrCB_MouseDown" />
         <Label x:Name="lblSqrCC" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="4" Grid.Row="4" MouseDown="lblSqrCC_MouseDown" />
+        <!-- Restart Buttons -->
+        <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="5">
+            <Button x:Name="btnReset" HorizontalAlignment="Stretch" Height="25" Margin="5" Content="RESTART GAME" />
+        </StackPanel>
     </Grid>
 </Window>
