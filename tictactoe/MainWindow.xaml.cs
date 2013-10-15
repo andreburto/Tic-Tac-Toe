@@ -21,7 +21,6 @@ namespace tictactoe
     public partial class MainWindow : Window
     {
         private string xoro = "X";
-        private int square = 0;
         private bool[] setornot = new bool[9];
 
         public MainWindow()
@@ -47,7 +46,24 @@ namespace tictactoe
             }
 
             this.Title = xoro + "'s turn";
+
+            CheckGameState();
         }
+
+        public void CheckGameState()
+        {
+            int count = 0;
+            foreach (bool c in setornot)
+            {
+                if (c == true) { count++; }
+            }
+            if (count == 9)
+            {
+                MessageBox.Show("Game Over!");
+                this.Close();
+            }
+        }
+
         private void lblSqrAA_MouseDown(object sender, MouseButtonEventArgs e)
         {
             xo((Label)sender, 0);
@@ -92,7 +108,5 @@ namespace tictactoe
         {
             xo((Label)sender, 8);
         }
-
-
     }
 }
