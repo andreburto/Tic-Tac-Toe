@@ -26,7 +26,19 @@ namespace tictactoe
         public MainWindow()
         {
             InitializeComponent();
+            StartGame();
+        }
+
+        public void StartGame()
+        {
+            this.xoro = "X";
             this.Title = xoro + "'s turn";
+        }
+
+        public void FinishGame()
+        {
+            this.Title = "Game over!";
+            MessageBox.Show("Game Over!");
         }
 
         public void xo(Label sqr, int square)
@@ -59,8 +71,7 @@ namespace tictactoe
             }
             if (count == 9)
             {
-                MessageBox.Show("Game Over!");
-                this.Close();
+                FinishGame();
             }
         }
 
