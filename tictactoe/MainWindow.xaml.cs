@@ -21,7 +21,7 @@ namespace tictactoe
     public partial class MainWindow : Window
     {
         private string xoro = "X";
-        private bool[] setornot = new bool[9];
+        private string[] setornot = new string[9];
 
         public MainWindow()
         {
@@ -47,13 +47,13 @@ namespace tictactoe
             lblSqrAA.Content = null; lblSqrAB.Content = null; lblSqrAC.Content = null;
             lblSqrBA.Content = null; lblSqrBB.Content = null; lblSqrBC.Content = null;
             lblSqrCA.Content = null; lblSqrCB.Content = null; lblSqrCC.Content = null;
-            for (int c = 0; c < setornot.Length; c++) { setornot[c] = false; }
+            for (int c = 0; c < setornot.Length; c++) { setornot[c] = ""; }
         }
 
         public void xo(Label sqr, int square)
         {
-            if (setornot[square] == true) { return; }
-            setornot[square] = true;
+            if (setornot[square] != "") { return; }
+            setornot[square] = xoro;
 
             if (xoro == "X")
             {
@@ -74,14 +74,11 @@ namespace tictactoe
         public void CheckGameState()
         {
             int count = 0;
-            foreach (bool c in setornot)
+            foreach (string c in setornot)
             {
-                if (c == true) { count++; }
+                if (c != "") { count++; }
             }
-            if (count == 9)
-            {
-                FinishGame();
-            }
+            if (count == 9) { FinishGame(); }
         }
 
         private void lblSqrAA_MouseDown(object sender, MouseButtonEventArgs e)
