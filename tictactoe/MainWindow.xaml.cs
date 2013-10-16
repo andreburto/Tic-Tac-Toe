@@ -33,6 +33,7 @@ namespace tictactoe
         {
             this.xoro = "X";
             this.Title = xoro + "'s turn";
+            ClearBoard();
         }
 
         public void FinishGame()
@@ -43,7 +44,10 @@ namespace tictactoe
 
         public void ClearBoard()
         {
-
+            lblSqrAA.Content = null; lblSqrAB.Content = null; lblSqrAC.Content = null;
+            lblSqrBA.Content = null; lblSqrBB.Content = null; lblSqrBC.Content = null;
+            lblSqrCA.Content = null; lblSqrCB.Content = null; lblSqrCC.Content = null;
+            for (int c = 0; c < setornot.Length; c++) { setornot[c] = false; }
         }
 
         public void xo(Label sqr, int square)
@@ -125,9 +129,10 @@ namespace tictactoe
             xo((Label)sender, 8);
         }
 
-        private void btnReset_MouseDown(object sender, MouseButtonEventArgs e)
+        private void btnReset_Click(object sender, RoutedEventArgs e)
         {
-
+            StartGame();
         }
+
     }
 }

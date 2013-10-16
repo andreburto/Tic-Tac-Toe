@@ -36,7 +36,7 @@
         <Label x:Name="lblSqrCC" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="4" Grid.Row="4" MouseDown="lblSqrCC_MouseDown" />
         <!-- Restart Buttons -->
         <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="5">
-            <Button x:Name="btnReset" HorizontalAlignment="Stretch" Height="25" Margin="5" Content="RESTART GAME" />
+            <Button x:Name="btnReset" HorizontalAlignment="Stretch" Height="25" Margin="5" Content="RESTART GAME" Click="btnReset_Click" />
         </StackPanel>
     </Grid>
 </Window>
