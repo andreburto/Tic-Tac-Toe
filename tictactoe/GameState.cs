@@ -10,11 +10,29 @@ namespace tictactoe
     {
         private List<TLine> _states = new List<TLine>();
 
-        public bool CheckBoard(string[] sqrs)
+        // Check for a winning line
+        public bool CheckBoardForWin(string[] sqrs)
         {
-            bool yesno = false;
+            foreach (TLine tl in _states)
+            {
+                if (sqrs[tl.A] == sqrs[tl.B] && sqrs[tl.B] == sqrs[tl.C])
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
 
-            return yesno;
+        // Check for a full board
+        public bool CheckBoardForFull(string[] sqrs)
+        {
+            int count = 0;
+            foreach (string s in sqrs)
+            {
+                if (s != "") { count++; }
+            }
+            if (count == 9) { return true; }
+            return false;
         }
 
         public GameState()

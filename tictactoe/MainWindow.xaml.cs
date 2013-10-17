@@ -22,6 +22,7 @@ namespace tictactoe
     {
         private string xoro = "X";
         private string[] setornot = new string[9];
+        private GameState gs;
 
         public MainWindow()
         {
@@ -34,12 +35,13 @@ namespace tictactoe
             this.xoro = "X";
             this.Title = xoro + "'s turn";
             ClearBoard();
+            gs = new GameState();
         }
 
-        public void FinishGame()
+        public void FinishGame(string msg)
         {
             this.Title = "Game over!";
-            MessageBox.Show("Game Over!");
+            MessageBox.Show(msg, "Game Over!");
         }
 
         public void ClearBoard()
@@ -55,20 +57,27 @@ namespace tictactoe
             if (setornot[square] != "") { return; }
             setornot[square] = xoro;
 
-            if (xoro == "X")
+            if (xoro == "X") { sqr.Content = new tictactoe.Xes(); }
+            else { sqr.Content = new tictactoe.Oes(); }
+
+            // Check for a win
+            if (gs.CheckBoardForWin(setornot))
             {
-                sqr.Content = new tictactoe.Xes();
-                xoro = "O";
+                FinishGame(xoro + " wins the game!");
+                return;
             }
-            else
+
+            // Check for full board
+            if (gs.CheckBoardForFull(setornot))
             {
-                sqr.Content = new tictactoe.Oes();
-                xoro = "X";
+                FinishGame("Draw game.");
+                return;
             }
+
+            if (xoro == "X") { xoro = "O"; }
+            else { xoro = "X"; }
 
             this.Title = xoro + "'s turn";
-
-            CheckGameState();
         }
 
         public void CheckGameState()
