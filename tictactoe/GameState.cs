@@ -17,7 +17,7 @@ namespace tictactoe
             {
                 if (sqrs[tl.A] == sqrs[tl.B] && sqrs[tl.B] == sqrs[tl.C])
                 {
-                    return true;
+                    if (sqrs[tl.A] != "") { return true; }
                 }
             }
             return false;

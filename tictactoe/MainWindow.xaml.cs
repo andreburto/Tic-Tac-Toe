@@ -80,16 +80,6 @@ namespace tictactoe
             this.Title = xoro + "'s turn";
         }
 
-        public void CheckGameState()
-        {
-            int count = 0;
-            foreach (string c in setornot)
-            {
-                if (c != "") { count++; }
-            }
-            if (count == 9) { FinishGame(); }
-        }
-
         private void lblSqrAA_MouseDown(object sender, MouseButtonEventArgs e)
         {
             xo((Label)sender, 0);
